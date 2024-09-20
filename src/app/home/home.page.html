@@ -1,29 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      GeoApp
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
 
   <div id="container">
    
-      <google-map [center]="position" [zoom]="zoom">
+      <google-map [width]="350" [center]="position" [zoom]="zoom" [mapTypeId]="mapTypeId">
         <map-marker [position]="position" [label]="label" [title]="title">
           
         </map-marker>
       </google-map>
       
-     
+     <p>Mi Coordenada:</p>
     <p>
       {{latitude}},{{longitude}}
     </p>
+    <br>
+  <div class="button-group">
+    <ion-button (click)="changeMapMode('roadmap')">
+      Normal
+    </ion-button>
+    <ion-button (click)="changeMapMode('satellite')">
+      Satelite
+    </ion-button>
+    <ion-button (click)="changeMapMode('terrain')">
+      Terreno
+    </ion-button>
+  </div>
   </div>
 </ion-content>

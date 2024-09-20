@@ -1,11 +1,18 @@
 #container {
+  
   text-align: center;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
 
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 100px;
+  //left: 0;
+  //right: 0;
+  //top: 50%;
+  //transform: translateY(-50%);
 }
 
 #container strong {
@@ -24,4 +31,9 @@
 
 #container a {
   text-decoration: none;
+}
+
+.button-group{
+  display: flex;
+
 }
